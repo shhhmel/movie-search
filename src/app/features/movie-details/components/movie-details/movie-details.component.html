@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-4 col-md-2 text-center mb-4 pl-4">
+    <img *ngIf="movie?.img" class="img-fluid" src="/assets/{{movie?.img}}" alt="">
+  </div>
+  <div class="col-sm-8 col-md-10">
+    <h3 class="pl-2 text-info">{{movie?.name}}</h3>
+    <table class="table table-borderless">
+      <tbody>
+        <tr>
+          <td class="py-1 text-muted">Description: </td>
+          <td class="py-1">{{movie?.description}}</td>
+        </tr>
+        <tr>
+          <td class="py-1 text-muted">Genres: </td>
+          <td class="py-1">{{movie?.genres | genres}}</td>
+        </tr>
+        <tr>
+          <td class="py-1 text-muted">Rating: </td>
+          <td class="py-1">{{movie?.rate}} ⭐</td>
+        </tr>
+        <tr>
+          <td class="py-1 text-muted">Length: </td>
+          <td class="py-1">{{movie?.length}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

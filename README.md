@@ -1,5 +1,27 @@
 # MovieSearchApp
 
+## Core features:
+- Movie list page
+- Search movies
+- Movie details page
+- FrontEnd Routing
+
+## Extra features:
+- Filter by genres
+- Sort by name, year and rating
+- Persist filters state between routes
+- Route animations
+- Redux (NgRx)
+- 404 Page for not found movies (not valid id's)
+- Green unit tests (>80%)
+
+## External libraries
+- ngrx
+- bootstrap
+- ng-select/ng-select
+- ngx-progressbar
+- nrwl/nx
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 
 ## Development server

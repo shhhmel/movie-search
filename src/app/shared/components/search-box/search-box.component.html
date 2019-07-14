@@ -1,0 +1,31 @@
+<form
+  class="my-2 my-lg-0"
+  [ngClass]="{ 'search-form-full-width': form.get('query').value && movies?.length }"
+  [formGroup]="form">
+  <div class="form-group mb-0">
+    <input
+      type="search"
+      class="form-control"
+      aria-describedby="search"
+      placeholder="What are we looking for?"
+      formControlName="query">
+    
+    <div class="search-dropdown-panel">
+      <ul class="list-group">
+        <a
+          *ngFor="let movie of movies"
+          routerLink="/movies/{{movie?.id}}"
+          class="list-group-item list-group-item-action search-item"
+          (click)="clearQuery()">
+          <div class="media">
+            <img class="img-fluid" src="assets/{{movie?.img}}" alt="">
+            <div class="media-body ml-3">
+              <h5 class="mt-0">{{movie?.name}}</h5>
+              <small class="text-muted">{{movie?.year}}</small>
+            </div>
+          </div>
+        </a>
+      </ul>
+    </div>
+  </div>
+</form>
